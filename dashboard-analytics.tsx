@@ -167,7 +167,7 @@ export default function DashboardAnalytics() {
                       <defs>
                         <linearGradient id="arcGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                           <stop offset="0%" stopColor="#3b82f6" />
-                          <stop offset="100%" stopColor="#1d4ed8" />
+                          <stop offset="100%" stopColor="#133756" />
                         </linearGradient>
                         <filter id="glow">
                           <feGaussianBlur stdDeviation="3" result="coloredBlur" />
@@ -207,10 +207,10 @@ export default function DashboardAnalytics() {
               </Card>
 
               {/* Modern Pie Chart */}
-              <Card className="border-0 shadow-lg bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-xl transition-all duration-300">
+              <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 to-blue-50 hover:shadow-xl transition-all duration-300">
                 <CardHeader className="pb-4">
                   <CardTitle className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     Distribution Analysis
                   </CardTitle>
                   <p className="text-sm text-gray-500">Performance breakdown by category</p>
@@ -220,12 +220,12 @@ export default function DashboardAnalytics() {
                     <svg className="w-full h-full" viewBox="0 0 100 100">
                       <defs>
                         <linearGradient id="pieGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#8b5cf6" />
-                          <stop offset="100%" stopColor="#7c3aed" />
+                          <stop offset="0%" stopColor="#3b82f6" />
+                          <stop offset="100%" stopColor="lightblue" />
                         </linearGradient>
                         <linearGradient id="pieGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
-                          <stop offset="0%" stopColor="#c084fc" />
-                          <stop offset="100%" stopColor="#a855f7" />
+                          <stop offset="0%" stopColor="#3b82f6" />
+                          <stop offset="100%" stopColor="#darkblue" />
                         </linearGradient>
                         <filter id="pieShadow">
                           <feDropShadow dx="2" dy="2" stdDeviation="3" floodOpacity="0.3" />
@@ -246,20 +246,20 @@ export default function DashboardAnalytics() {
                     </svg>
                     <div className="absolute top-6 right-6 space-y-1">
                       <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1">
-                        <div className="text-lg font-bold text-purple-600">33%</div>
+                        <div className="text-lg font-bold text-blue-900">33%</div>
                       </div>
                       <div className="bg-white/90 backdrop-blur-sm rounded-lg px-3 py-1">
-                        <div className="text-2xl font-bold text-purple-800">67%</div>
+                        <div className="text-2xl font-bold text-blue-500">67%</div>
                       </div>
                     </div>
                   </div>
                   <div className="flex gap-6 text-sm bg-white/70 backdrop-blur-sm rounded-lg px-4 py-2">
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full shadow-sm"></div>
+                      <div className="w-4 h-4 bg-gradient-to-r from-blue-600 to-blue-900 rounded-full shadow-sm"></div>
                       <span className="font-medium">Primary</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-4 h-4 bg-gradient-to-r from-purple-400 to-purple-500 rounded-full shadow-sm"></div>
+                      <div className="w-4 h-4 bg-gradient-to-r from-blue-400 to-blue-500 rounded-full shadow-sm"></div>
                       <span className="font-medium">Secondary</span>
                     </div>
                   </div>
@@ -267,10 +267,10 @@ export default function DashboardAnalytics() {
               </Card>
 
               {/* Modern Gauge Chart */}
-              <Card className="border-0 shadow-lg bg-gradient-to-br from-emerald-50 to-teal-50 hover:shadow-xl transition-all duration-300">
+              <Card className="border-0 shadow-lg bg-gradient-to-br from-blue-50 to-blue-50 hover:shadow-xl transition-all duration-300">
                 <CardHeader className="pb-4">
                   <CardTitle className="text-lg font-semibold text-gray-900 flex items-center gap-2">
-                    <div className="w-2 h-2 bg-emerald-600 rounded-full"></div>
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     Performance Gauge
                   </CardTitle>
                 </CardHeader>
@@ -279,9 +279,9 @@ export default function DashboardAnalytics() {
                     <svg className="w-full h-full" viewBox="0 0 200 120">
                       <defs>
                         <linearGradient id="gaugeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#ef4444" />
-                          <stop offset="50%" stopColor="#f59e0b" />
-                          <stop offset="100%" stopColor="#10b981" />
+                          <stop offset="0%" stopColor="#3b82f6" />
+                          <stop offset="50%" stopColor="#3b82f6" />
+                          <stop offset="100%" stopColor="#133756" />
                         </linearGradient>
                         <filter id="gaugeShadow">
                           <feDropShadow dx="0" dy="2" stdDeviation="4" floodOpacity="0.3" />
@@ -301,18 +301,18 @@ export default function DashboardAnalytics() {
                       <path
                         d="M 20 100 A 80 80 0 0 1 140 40"
                         fill="none"
-                        stroke="#10b981"
+                        stroke="#133756"
                         strokeWidth="8"
                         strokeLinecap="round"
                         filter="url(#gaugeShadow)"
                       />
                       {/* Needle */}
-                      <line x1="100" y1="100" x2="140" y2="40" stroke="#374151" strokeWidth="3" strokeLinecap="round" />
+                      <line x1="100" y1="100" x2="140" y2="40" stroke="#668c91" strokeWidth="3" strokeLinecap="round" />
                       <circle cx="100" cy="100" r="6" fill="#374151" />
                     </svg>
                     <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
                       <div className="bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 text-center">
-                        <div className="text-3xl font-bold bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
+                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
                           320.4K
                         </div>
                         <div className="text-xs text-gray-500">Current Value</div>
@@ -332,7 +332,7 @@ export default function DashboardAnalytics() {
                   <div className="mt-3 grid grid-cols-3 gap-2 text-xs w-full">
                     <div className="text-center bg-white/50 rounded-lg p-2">
                       <div className="text-gray-500">Current</div>
-                      <div className="font-semibold text-emerald-600">18.765</div>
+                      <div className="font-semibold text-cyan-600">18.765</div>
                     </div>
                     <div className="text-center bg-white/50 rounded-lg p-2">
                       <div className="text-gray-500">Average</div>
@@ -340,7 +340,7 @@ export default function DashboardAnalytics() {
                     </div>
                     <div className="text-center bg-white/50 rounded-lg p-2">
                       <div className="text-gray-500">Target</div>
-                      <div className="font-semibold text-orange-600">45.2K</div>
+                      <div className="font-semibold text-rose-900">45.2K</div>
                     </div>
                   </div>
                 </CardContent>
@@ -365,7 +365,7 @@ export default function DashboardAnalytics() {
                   </div>
                   <div className="flex flex-wrap gap-2 lg:gap-4 text-sm">
                     <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-lg px-3 py-2">
-                      <div className="w-3 h-3 bg-gradient-to-r from-purple-500 to-purple-600 rounded shadow-sm"></div>
+                      <div className="w-3 h-3 bg-gradient-to-r from-cyan-600 to-cyan-700 rounded shadow-sm"></div>
                       <span className="font-medium text-xs lg:text-sm">Q1 Revenue</span>
                     </div>
                     <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-lg px-3 py-2">
@@ -373,7 +373,7 @@ export default function DashboardAnalytics() {
                       <span className="font-medium text-xs lg:text-sm">Q2 Revenue</span>
                     </div>
                     <div className="flex items-center gap-2 bg-white/70 backdrop-blur-sm rounded-lg px-3 py-2">
-                      <div className="w-3 h-3 bg-gradient-to-r from-orange-500 to-orange-600 rounded shadow-sm"></div>
+                      <div className="w-3 h-3 bg-gradient-to-r from-rose-700 to-rose-900 rounded shadow-sm"></div>
                       <span className="font-medium text-xs lg:text-sm">Q3 Revenue</span>
                     </div>
                   </div>
@@ -433,7 +433,7 @@ export default function DashboardAnalytics() {
                           >
                             <div className="flex items-end gap-0.5 lg:gap-1 h-full transition-all duration-300 group-hover:scale-105">
                               <div
-                                className="bg-gradient-to-t from-purple-600 to-purple-500 rounded-t shadow-sm hover:shadow-md transition-all duration-300 w-1.5 lg:w-2.5"
+                                className="bg-gradient-to-t from-cyan-600 to-cyan-700 rounded-t shadow-sm hover:shadow-md transition-all duration-300 w-1.5 lg:w-2.5"
                                 style={{
                                   height: `${Math.max((values[0] / 60) * 240, 4)}px`,
                                 }}
@@ -445,7 +445,7 @@ export default function DashboardAnalytics() {
                                 }}
                               ></div>
                               <div
-                                className="bg-gradient-to-t from-orange-600 to-orange-500 rounded-t shadow-sm hover:shadow-md transition-all duration-300 w-1.5 lg:w-2.5"
+                                className="bg-gradient-to-t from-rose-700 to-rose-900 rounded-t shadow-sm hover:shadow-md transition-all duration-300 w-1.5 lg:w-2.5"
                                 style={{
                                   height: `${Math.max((values[2] / 60) * 240, 4)}px`,
                                 }}

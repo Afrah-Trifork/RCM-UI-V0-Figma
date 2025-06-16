@@ -1215,7 +1215,7 @@ export default function PreAuthorizationAnalytics() {
                         <div className="flex-1">
                           <div className="text-sm font-medium text-gray-900">{item.reason}</div>
                           <div className="w-full bg-gray-200 rounded-full h-2 mt-1">
-                            <div className="bg-red-500 h-2 rounded-full" style={{ width: `${item.percentage}%` }}></div>
+                            <div className="bg-rose-700 h-2 rounded-full" style={{ width: `${item.percentage}%` }}></div>
                           </div>
                         </div>
                         <div className="ml-4 text-right">

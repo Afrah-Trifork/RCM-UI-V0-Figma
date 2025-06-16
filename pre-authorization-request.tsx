@@ -557,7 +557,7 @@ export default function PreAuthorizationRequest({ requestId }: PreAuthorizationR
               <CardContent className="px-6 py-4">
                 <div className="space-y-4">
                   {requestData.diagnosis.map((diagnosis, index) => (
-                    <div key={index} className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4 bg-gray-50 rounded-lg">
+                    <div key={index} className="grid grid-cols-4 md:grid-cols-5 gap-2 p-4 bg-gray-50 rounded-lg">
                       <div>
                         <span className="text-gray-500 text-sm">ICD10 code</span>
                         <p className="font-medium text-gray-900">{diagnosis.icd10Code}</p>
@@ -566,22 +566,17 @@ export default function PreAuthorizationRequest({ requestId }: PreAuthorizationR
                         <span className="text-gray-500 text-sm">Description</span>
                         <p className="font-medium text-gray-900">{diagnosis.description}</p>
                       </div>
-                    </div>
-                  ))}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-blue-50 rounded-lg">
-                    <div>
+                       <div>
                       <span className="text-gray-500 text-sm">Type</span>
                       <p className="font-medium text-gray-900">Primary</p>
-                      <span className="text-gray-500 text-sm mt-2 block">Type</span>
-                      <p className="font-medium text-gray-900">Secondary</p>
                     </div>
                     <div>
                       <span className="text-gray-500 text-sm">POA</span>
                       <p className="font-medium text-gray-900">-</p>
-                      <span className="text-gray-500 text-sm mt-2 block">POA</span>
-                      <p className="font-medium text-gray-900">-</p>
                     </div>
-                  </div>
+                    </div>
+                  ))}
+                 
                   <Button variant="outline" size="sm" className="gap-2">
                     <Plus className="w-4 h-4" />
                     Add Diagnosis

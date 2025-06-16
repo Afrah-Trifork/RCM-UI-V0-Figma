@@ -395,9 +395,7 @@ export default function ClaimsCodingQueue() {
                         <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-700 w-24 whitespace-nowrap">
                           Patient name
                         </th>
-                        <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-700 w-16 whitespace-nowrap">
-                          Visit ID
-                        </th>
+                        
                         <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-700 w-16 whitespace-nowrap">
                           Invoice No.
                         </th>
@@ -415,6 +413,9 @@ export default function ClaimsCodingQueue() {
                         </th>
                         <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-700 w-16 whitespace-nowrap">
                           Payer
+                        </th>
+                        <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-700 w-16 whitespace-nowrap">
+                          Visit ID
                         </th>
                         <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-700 w-16 whitespace-nowrap">
                           Visit type
@@ -454,7 +455,6 @@ export default function ClaimsCodingQueue() {
                           </td>
                           <td className="py-2.5 px-3 text-xs text-gray-900">{claim.civilId}</td>
                           <td className="py-2.5 px-3 text-xs font-medium text-gray-900">{claim.patientName}</td>
-                          <td className="py-2.5 px-3 text-xs text-gray-900">{claim.visitId}</td>
                           <td className="py-2.5 px-3 text-xs text-gray-900">{claim.invoiceNo}</td>
                           <td className="py-2.5 px-3 text-xs text-gray-900">{claim.dateOfService}</td>
                           <td className="py-2.5 px-3 text-xs font-medium text-gray-900">{claim.invoiceAmount}</td>
@@ -470,6 +470,8 @@ export default function ClaimsCodingQueue() {
                           </td>
                           <td className="py-2.5 px-3 text-xs text-gray-900">{claim.insurance}</td>
                           <td className="py-2.5 px-3 text-xs text-gray-900">{claim.payer}</td>
+                                                    <td className="py-2.5 px-3 text-xs text-gray-900">{claim.visitId}</td>
+
                           <td className="py-2.5 px-3">
                             <span
                               className={`text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap ${

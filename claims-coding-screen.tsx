@@ -589,38 +589,7 @@ export default function ClaimsCodingScreen({ claimId }: ClaimsCodingScreenProps)
 
             {/* Diagnosis Sections */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Diagnosis from physician */}
-              <Card className="border-0 shadow-sm">
-                <CardHeader className="px-6 py-4 bg-orange-50 border-b border-orange-100">
-                  <CardTitle className="text-lg font-semibold text-orange-900">Diagnosis from physician</CardTitle>
-                </CardHeader>
-                <CardContent className="px-6 py-4">
-                  <div className="space-y-4">
-                    {claimData.diagnosisFromPhysician.map((diagnosis, index) => (
-                      <div key={index} className="grid grid-cols-4 gap-4 p-4 bg-gray-50 rounded-lg text-sm">
-                        <div>
-                          <span className="text-gray-500">ICD10 code</span>
-                          <p className="font-medium text-gray-900">{diagnosis.icd10Code}</p>
-                        </div>
-                        <div className="col-span-2">
-                          <span className="text-gray-500">Description</span>
-                          <p className="font-medium text-gray-900">{diagnosis.description}</p>
-                        </div>
-                        <div className="space-y-2">
-                          <div>
-                            <span className="text-gray-500">Type</span>
-                            <p className="font-medium text-gray-900">{diagnosis.type}</p>
-                          </div>
-                          <div>
-                            <span className="text-gray-500">POA</span>
-                            <p className="font-medium text-gray-900">{diagnosis.poa || "-"}</p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              
 
               {/* Coder diagnosis */}
               <Card className="border-0 shadow-sm">
@@ -651,6 +620,39 @@ export default function ClaimsCodingScreen({ claimId }: ClaimsCodingScreenProps)
                             className="h-8 text-xs"
                             readOnly
                           />
+                        </div>
+                        <div className="space-y-2">
+                          <div>
+                            <span className="text-gray-500">Type</span>
+                            <p className="font-medium text-gray-900">{diagnosis.type}</p>
+                          </div>
+                          <div>
+                            <span className="text-gray-500">POA</span>
+                            <p className="font-medium text-gray-900">{diagnosis.poa || "-"}</p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Diagnosis from physician */}
+              <Card className="border-0 shadow-sm">
+                <CardHeader className="px-6 py-4 bg-orange-50 border-b border-orange-100">
+                  <CardTitle className="text-lg font-semibold text-orange-900">Diagnosis from physician</CardTitle>
+                </CardHeader>
+                <CardContent className="px-6 py-4">
+                  <div className="space-y-4">
+                    {claimData.diagnosisFromPhysician.map((diagnosis, index) => (
+                      <div key={index} className="grid grid-cols-4 gap-4 p-4 bg-gray-50 rounded-lg text-sm">
+                        <div>
+                          <span className="text-gray-500">ICD10 code</span>
+                          <p className="font-medium text-gray-900">{diagnosis.icd10Code}</p>
+                        </div>
+                        <div className="col-span-2">
+                          <span className="text-gray-500">Description</span>
+                          <p className="font-medium text-gray-900">{diagnosis.description}</p>
                         </div>
                         <div className="space-y-2">
                           <div>
@@ -746,10 +748,7 @@ export default function ClaimsCodingScreen({ claimId }: ClaimsCodingScreenProps)
                       </p>
                     </div>
                   </div>
-                  <div>
-                    <span className="text-gray-500 text-sm">Remarks</span>
-                    <p className="font-medium text-gray-900 mt-1">{claimData.codingStatus.remarks}</p>
-                  </div>
+                 
                   <div className="pt-4 border-t border-gray-100">
                     <p className="text-sm text-gray-600">
                       Codified by : <span className="font-medium">{claimData.codingStatus.codifiedBy}</span>

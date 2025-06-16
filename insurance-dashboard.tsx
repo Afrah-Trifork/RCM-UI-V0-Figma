@@ -259,7 +259,7 @@ export default function InsuranceDashboard() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 lg:gap-4">
               <Select defaultValue="111111111">
                 <SelectTrigger className="bg-white h-10">
-                  <SelectValue placeholder="Facility ID" />
+                  <SelectValue placeholder="Facility ID">Facility ID</SelectValue>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="111111111">111111111</SelectItem>
@@ -270,7 +270,7 @@ export default function InsuranceDashboard() {
                   <SelectValue placeholder="Facility Name" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="hospital">Hospital Name</SelectItem>
+                  <SelectItem value="hospital">Facility Name</SelectItem>
                 </SelectContent>
               </Select>
               <Select>
@@ -289,12 +289,12 @@ export default function InsuranceDashboard() {
                   <SelectValue placeholder="From date" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="11.05.2025">11.05.2025</SelectItem>
+                  <SelectItem value="11.05.2025">From Date</SelectItem>
                 </SelectContent>
               </Select>
               <Select defaultValue="all">
                 <SelectTrigger className="bg-white h-10">
-                  <SelectValue placeholder="Insurance / TPA" />
+                  <SelectValue placeholder="Insurance / TPA">Insurance / TPA</SelectValue>
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All</SelectItem>
@@ -326,7 +326,7 @@ export default function InsuranceDashboard() {
                   <SelectValue placeholder="To date" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="12.05.2025">12.05.2025</SelectItem>
+                  <SelectItem value="12.05.2025">To Date</SelectItem>
                 </SelectContent>
               </Select>
             </div>

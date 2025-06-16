@@ -147,9 +147,8 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
 
       {/* Sidebar */}
       <div
-        className={`fixed lg:static inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 transform ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } lg:translate-x-0 transition-transform duration-200 ease-in-out`}
+        className={`fixed lg:static inset-y-0 left-0 z-50 w-64 bg-white border-r border-gray-200 transform ${sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          } lg:translate-x-0 transition-transform duration-200 ease-in-out`}
       >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 lg:p-6">
@@ -174,9 +173,8 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
               <Link key={index} href={item.href}>
                 <Button
                   variant={item.active ? "default" : "ghost"}
-                  className={`w-full justify-start gap-3 h-10 px-3 text-sm ${
-                    item.active ? "bg-blue-50 text-blue-700 hover:bg-blue-50" : "text-gray-600 hover:bg-gray-50"
-                  }`}
+                  className={`w-full justify-start gap-3 h-10 px-3 text-sm ${item.active ? "bg-blue-50 text-blue-700 hover:bg-blue-50" : "text-gray-600 hover:bg-gray-50"
+                    }`}
                 >
                   <item.icon className="w-4 h-4 flex-shrink-0" />
                   <span className="truncate">{item.label}</span>
@@ -268,11 +266,10 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
                 <div className="flex items-center gap-4">
                   <Button
                     variant={activeTab === "resubmission" ? "default" : "ghost"}
-                    className={`px-4 py-2 text-sm ${
-                      activeTab === "resubmission"
+                    className={`px-4 py-2 text-sm ${activeTab === "resubmission"
                         ? "bg-blue-600 text-white border-b-2 border-blue-600"
                         : "text-gray-600 hover:text-gray-900"
-                    }`}
+                      }`}
                     onClick={() => setActiveTab("resubmission")}
                   >
                     Resubmission (1)
@@ -288,63 +285,57 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
                 <Card>
                   <CardContent className="p-4">
                     <h3 className="font-semibold text-gray-900 mb-4">{patientData.name}</h3>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Civil ID</span>
+                    <div className="grid grid-cols-2 gap-3 text-sm">
+                      <div>
+                        <span className="text-gray-600 block">Civil ID</span>
                         <span className="text-gray-900">{patientData.civilId}</span>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">MRN</span>
+                      <div>
+                        <span className="text-gray-600 block">MRN</span>
                         <span className="text-gray-900">{patientData.mrn}</span>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">DOB</span>
+                     <div>
+                        <span className="text-gray-600 block">DOB</span>
                         <span className="text-gray-900">{patientData.dob}</span>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Age</span>
+                      <div>
+                        <span className="text-gray-600 block">Age</span>
                         <span className="text-gray-900">{patientData.age}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Nationality</span>
+                    </div>
+                    <div>
+                        <span className="text-gray-600 block">Nationality</span>
                         <span className="text-gray-900">{patientData.nationality}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Gender</span>
+                     </div>
+                     <div>
+                        <span className="text-gray-600 block">Gender</span>
                         <span className="text-gray-900">{patientData.gender}</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Marital status</span>
+                     </div>
+                     <div>
+                        <span className="text-gray-600 block">Marital status</span>
                         <span className="text-gray-900">{patientData.maritalStatus}</span>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-
+             
                 {/* Insurance Details */}
                 <Card>
                   <CardContent className="p-4">
                     <h3 className="font-semibold text-gray-900 mb-4">Insurance details</h3>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Mednet</span>
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <span className="text-gray-600 block">Mednet</span>
                         <span className="text-gray-900">Orient</span>
                       </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Member ID</span>
+                      <div>
+                        <span className="text-gray-600 block">Member ID</span>
                         <span className="text-gray-900">{insuranceDetails.memberId}</span>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                {/* Valid Period */}
-                <Card>
-                  <CardContent className="p-4">
-                    <h3 className="font-semibold text-gray-900 mb-4">Valid period</h3>
-                    <p className="text-sm text-gray-900">{insuranceDetails.validPeriod}</p>
-                  </CardContent>
-                </Card>
+
               </div>
 
               {/* Middle Column */}
@@ -405,104 +396,91 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
                     </div>
                   </CardContent>
                 </Card>
+                
+                {/* Right Column */}
+                <div className="space-y-6">
+                  <Card>
+                    <CardContent className="p-4">
+                      <div className="grid grid-cols-2 gap-4 text-sm">
+                        <div className="space-y-2">
+                          <div>
+                            <span className="text-gray-600 block">Encounter type</span>
+                            <span className="text-gray-900">{claimDetails.encounterType}</span>
+                          </div>
+                          <div>
+                            <span className="text-gray-600 block">Encounter start</span>
+                            <span className="text-gray-900">{claimDetails.encounterStart}</span>
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <div>
+                            <span className="text-gray-600 block">Encounter End</span>
+                            <span className="text-gray-900">{claimDetails.encounterEnd}</span>
+                          </div>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                  
+                </div>
 
-                {/* Claim Details */}
-                <Card>
-                  <CardContent className="p-4">
-                    <h3 className="font-semibold text-gray-900 mb-4">Claim details</h3>
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div className="space-y-2">
-                        <div>
-                          <span className="text-gray-600 block">Invoice no.</span>
-                          <span className="text-gray-900">{claimDetails.invoiceNo}</span>
-                        </div>
-                        <div>
-                          <span className="text-gray-600 block">Submission date</span>
-                          <span className="text-gray-900">{claimDetails.submissionDate}</span>
-                        </div>
-                        <div>
-                          <span className="text-gray-600 block">RA date</span>
-                          <span className="text-gray-900">{claimDetails.raDate}</span>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <div>
-                          <span className="text-gray-600 block">Resubmission date</span>
-                          <span className="text-gray-900">{claimDetails.resubmissionDate}</span>
-                        </div>
-                        <div>
-                          <span className="text-gray-600 block">Resubmission RA Date</span>
-                          <span className="text-gray-900">{claimDetails.resubmissionRaDate}</span>
-                        </div>
-                        <div>
-                          <span className="text-gray-600 block">Days since last RA</span>
-                          <span className="text-gray-900">{claimDetails.daysSinceLastRa}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
               </div>
-
-              {/* Right Column */}
+              {/* Claim Details */}
               <div className="space-y-6">
-                <Card>
-                  <CardContent className="p-4">
-                    <div className="grid grid-cols-2 gap-4 text-sm">
-                      <div className="space-y-2">
-                        <div>
-                          <span className="text-gray-600 block">Encounter type</span>
-                          <span className="text-gray-900">{claimDetails.encounterType}</span>
-                        </div>
-                        <div>
-                          <span className="text-gray-600 block">Encounter start</span>
-                          <span className="text-gray-900">{claimDetails.encounterStart}</span>
-                        </div>
+              <Card>
+                <CardContent className="p-4 pb-16">
+                  <h3 className="font-semibold text-gray-900 mb-4">Claim details</h3>
+                  <div className="grid grid-cols-2 gap-4 text-sm pb-2 ">
+                    <div className="space-y-2">
+                      <div>
+                        <span className="text-gray-600 block">Invoice no.</span>
+                        <span className="text-gray-900">{claimDetails.invoiceNo}</span>
                       </div>
-                      <div className="space-y-2">
-                        <div>
-                          <span className="text-gray-600 block">Encounter End</span>
-                          <span className="text-gray-900">{claimDetails.encounterEnd}</span>
-                        </div>
+                      <div>
+                        <span className="text-gray-600 block">Submission date</span>
+                        <span className="text-gray-900">{claimDetails.submissionDate}</span>
+                      </div>
+                      <div>
+                        <span className="text-gray-600 block">RA date</span>
+                        <span className="text-gray-900">{claimDetails.raDate}</span>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-
-            {/* Diagnosis Sections */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-              {/* Diagnosis from Physician */}
-              <Card>
-                <CardContent className="p-4">
-                  <h3 className="font-semibold text-gray-900 mb-4">Diagnosis from physician</h3>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                      <thead className="bg-gray-50">
-                        <tr>
-                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">No.</th>
-                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">ICD10 code</th>
-                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">Description</th>
-                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">Type</th>
-                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">POA</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {diagnosisFromPhysician.map((diagnosis) => (
-                          <tr key={diagnosis.no} className="border-b border-gray-100">
-                            <td className="py-2 px-3 text-gray-900">{diagnosis.no}</td>
-                            <td className="py-2 px-3 text-gray-900">{diagnosis.icd10}</td>
-                            <td className="py-2 px-3 text-gray-900">{diagnosis.description}</td>
-                            <td className="py-2 px-3 text-gray-900">{diagnosis.type}</td>
-                            <td className="py-2 px-3 text-gray-900">{diagnosis.poa}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                    <div className="space-y-2">
+                      <div>
+                        <span className="text-gray-600 block">Resubmission date</span>
+                        <span className="text-gray-900">{claimDetails.resubmissionDate}</span>
+                      </div>
+                      <div>
+                        <span className="text-gray-600 block">Resubmission RA Date</span>
+                        <span className="text-gray-900">{claimDetails.resubmissionRaDate}</span>
+                      </div>
+                      <div>
+                        <span className="text-gray-600 block">Days since last RA</span>
+                        <span className="text-gray-900">{claimDetails.daysSinceLastRa}</span>
+                      </div>
+                       <div>
+                       
+                      </div>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
+              
+               {/* Valid Period */}
+              <Card>
+                <CardContent className="p-4 pb-16">
+                  <div className="grid grid-cols-2 gap-4 text-sm pb-1">
+
+                    <h3 className="font-semibold text-gray-900 mb-4">Valid period</h3>
+                    <p className="text-sm text-gray-900">{insuranceDetails.validPeriod}</p>
+                  </div>
+                </CardContent>
+              </Card>
+              </div>
+            
+</div>
+            {/* Diagnosis Sections */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
 
               {/* Coder Diagnosis */}
               <Card>
@@ -537,6 +515,38 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
                   </Button>
                 </CardContent>
               </Card>
+
+              {/* Diagnosis from Physician */}
+              <Card>
+                <CardContent className="p-4">
+                  <h3 className="font-semibold text-gray-900 mb-4">Diagnosis from physician</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">No.</th>
+                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">ICD10 code</th>
+                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">Description</th>
+                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">Type</th>
+                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">POA</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {diagnosisFromPhysician.map((diagnosis) => (
+                          <tr key={diagnosis.no} className="border-b border-gray-100">
+                            <td className="py-2 px-3 text-gray-900">{diagnosis.no}</td>
+                            <td className="py-2 px-3 text-gray-900">{diagnosis.icd10}</td>
+                            <td className="py-2 px-3 text-gray-900">{diagnosis.description}</td>
+                            <td className="py-2 px-3 text-gray-900">{diagnosis.type}</td>
+                            <td className="py-2 px-3 text-gray-900">{diagnosis.poa}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </CardContent>
+              </Card>
+
             </div>
 
             {/* Service Details */}
@@ -597,8 +607,8 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
                         <td className="py-2 px-3 text-gray-900">12 OMR</td>
                         <td className="py-2 px-3 text-gray-900">0 OMR</td>
                         <td className="py-2 px-3 text-gray-900">12 OMR</td>
+                        <td className="py-2 px-3 text-gray-900">0 OMR</td>
                         <td className="py-2 px-3 text-gray-900">12 OMR</td>
-                        <td className="py-2 px-3"></td>
                         <td className="py-2 px-3"></td>
                         <td className="py-2 px-3"></td>
                         <td className="py-2 px-3"></td>
@@ -632,12 +642,12 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
                 <label className="block text-sm font-medium text-gray-700 mb-2">Resubmission remarks</label>
                 <Textarea placeholder="Lorem Ipsum" className="min-h-[100px]" />
               </div>
-              <div className="space-y-4">
+              <div className="space-y-2">
                 <div>
                   <span className="text-sm text-gray-600">Resubmission prepared by</span>
                   <p className="text-sm font-medium text-gray-900">Ali Khalid</p>
                 </div>
-                <div className="flex justify-between text-sm">
+                
                   <div>
                     <span className="text-gray-600">Prepared date</span>
                     <p className="text-gray-900">11.10.2020</p>
@@ -645,7 +655,7 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
                   <div>
                     <span className="text-gray-600">Time</span>
                     <p className="text-gray-900">02:34 PM</p>
-                  </div>
+                  
                 </div>
               </div>
             </div>

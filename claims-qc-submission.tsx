@@ -404,12 +404,13 @@ export default function ClaimsQCSubmission() {
                         <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">Visit type</th>
                         <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">MRN</th>
                         <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">Name</th>
-                        <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">Net Amount</th>
+                        
                         <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">Visit ID</th>
                         <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">Invoice No.</th>
                         <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">Date of visit</th>
                         <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">Gross</th>
                         <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">Patient share</th>
+                        <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">Net Amount</th>
                         <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700">View claim</th>
                       </tr>
                     </thead>
@@ -432,12 +433,13 @@ export default function ClaimsQCSubmission() {
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.visitType}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.mrn}</td>
                           <td className="py-3 px-3 text-xs font-medium text-gray-900">{claim.name}</td>
-                          <td className="py-3 px-3 text-xs text-gray-900">{claim.netAmount}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.visitId}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.invoiceNo}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.dateOfVisit}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.gross}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.patientShare}</td>
+                                                    <td className="py-3 px-3 text-xs text-gray-900">{claim.netAmount}</td>
+
                           <td className="py-3 px-3">
                             <Button
                               variant="ghost"
@@ -452,16 +454,13 @@ export default function ClaimsQCSubmission() {
                       ))}
                       {/* Total Row */}
                       <tr className="bg-gray-50 border-t-2 border-gray-200 font-semibold">
-                        <td className="py-3 px-3 text-xs text-gray-900" colSpan={8}>
-                          Total
-                        </td>
-                        <td className="py-3 px-3 text-xs text-gray-900">{totals.netAmount.toFixed(2)}</td>
-                        <td className="py-3 px-3 text-xs text-gray-900" colSpan={3}>
+                        <td className="py-3 px-3 text-xs text-gray-900" colSpan={11}>
                           Total
                         </td>
                         <td className="py-3 px-3 text-xs text-gray-900">{totals.gross.toFixed(2)}</td>
+                       
                         <td className="py-3 px-3 text-xs text-gray-900">{totals.patientShare.toFixed(2)}</td>
-                        <td className="py-3 px-3 text-xs text-gray-900">Total</td>
+                        <td className="py-3 px-3 text-xs text-gray-900">{totals.netAmount.toFixed(2)}</td>
                       </tr>
                     </tbody>
                   </table>

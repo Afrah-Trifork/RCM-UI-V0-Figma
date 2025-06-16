@@ -407,7 +407,7 @@ export default function ClaimsCodingScreen({ claimId }: ClaimsCodingScreenProps)
             </div>
             <div className="flex items-center gap-2 lg:gap-4">
               <span className="hidden sm:block text-sm lg:text-lg font-medium text-gray-900 truncate">
-                Royal hospital Muscat
+                Royal Hospital Muscat
               </span>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -935,17 +935,7 @@ export default function ClaimsCodingScreen({ claimId }: ClaimsCodingScreenProps)
                                           </div>
                                         )}
 
-                                        <div className="flex justify-end">
-                                          <Button
-                                            variant="outline"
-                                            size="sm"
-                                            className="text-red-600 border-red-200 hover:bg-red-50"
-                                            onClick={() => handleDeleteQuery(index)}
-                                          >
-                                            <Trash2 className="w-4 h-4 mr-2" />
-                                            Delete Query
-                                          </Button>
-                                        </div>
+                                       
                                       </div>
                                     </td>
                                   </tr>

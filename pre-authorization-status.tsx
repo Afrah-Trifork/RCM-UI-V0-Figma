@@ -206,14 +206,14 @@ export default function PreAuthorizationStatus() {
               </Button>
               <div className="min-w-0">
                 <h1 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-1 truncate">
-                  Pre-authorization Status
+                  Pre-authorization 
                 </h1>
                 <p className="text-xs lg:text-sm text-gray-500">Updated: 09.41h</p>
               </div>
             </div>
             <div className="flex items-center gap-2 lg:gap-4">
               <span className="hidden sm:block text-sm lg:text-lg font-medium text-gray-900 truncate">
-                Royal hospital Muscat
+                Royal Hospital Muscat
               </span>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>

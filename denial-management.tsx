@@ -484,7 +484,7 @@ export default function DenialManagement() {
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.visitType}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.remittedDate}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.settlementDate}</td>
-                          <td className="py-3 px-3 text-xs text-gray-900">{claim.paymentStatus}</td>
+                          <td className="inline-flex items-center px-2.5 py-0.5 mt-4 rounded-full text-xs text-orange-800 font-semibold border whitespace-nowrap bg-orange-100">{claim.paymentStatus}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.visitId}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.invoiceNo}</td>
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.dateOfService}</td>

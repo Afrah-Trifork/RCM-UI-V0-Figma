@@ -1,5 +1,7 @@
 import ResubmissionScreen from "../../../resubmission-screen"
 
-export default function ResubmissionPage({ params }: { params: { id: string } }) {
-  return <ResubmissionScreen claimId={params.id} />
+export default async function ResubmissionPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  return <ResubmissionScreen claimId={id} />
 }
+

@@ -78,7 +78,7 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
     provider: "Mednet",
     payer: "Orient",
     memberId: "Member ID",
-    validPeriod: "01-01-2005 - 01-12-2025",
+    validPeriod: "01.01.2005 - 01.12.2025",
   }
 
   const claimDetails = {

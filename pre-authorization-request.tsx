@@ -354,9 +354,9 @@ export default function PreAuthorizationRequest({ requestId }: PreAuthorizationR
               </Link>
               <div className="min-w-0">
                 <h1 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-1 truncate">
-                  Pre-authorization Request
+                  Pre-authorization Details
                 </h1>
-                <p className="text-xs lg:text-sm text-gray-500">Pre-authorization request</p>
+                <p className="text-xs lg:text-sm text-gray-500">Pre-authorization details</p>
               </div>
             </div>
             <div className="flex items-center gap-2 lg:gap-4">

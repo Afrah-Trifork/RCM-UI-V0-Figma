@@ -482,7 +482,39 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
             {/* Diagnosis Sections */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
 
-              {/* Coder Diagnosis */}
+            
+
+              {/* Diagnosis from Physician */}
+              <Card>
+                <CardContent className="p-4">
+                  <h3 className="font-semibold text-gray-900 mb-4">Diagnosis from physician</h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead className="bg-gray-50">
+                        <tr>
+                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">No.</th>
+                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">ICD10 code</th>
+                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">Description</th>
+                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">Type</th>
+                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">POA</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {diagnosisFromPhysician.map((diagnosis) => (
+                          <tr key={diagnosis.no} className="border-b border-gray-100">
+                            <td className="py-2 px-3 text-gray-900">{diagnosis.no}</td>
+                            <td className="py-2 px-3 text-gray-900">{diagnosis.icd10}</td>
+                            <td className="py-2 px-3 text-gray-900">{diagnosis.description}</td>
+                            <td className="py-2 px-3 text-gray-900">{diagnosis.type}</td>
+                            <td className="py-2 px-3 text-gray-900">{diagnosis.poa}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </CardContent>
+              </Card>
+  {/* Coder Diagnosis */}
               <Card>
                 <CardContent className="p-4">
                   <h3 className="font-semibold text-gray-900 mb-4">Coder Diagnosis</h3>
@@ -515,38 +547,6 @@ export default function ResubmissionScreen({ claimId }: ResubmissionScreenProps)
                   </Button>
                 </CardContent>
               </Card>
-
-              {/* Diagnosis from Physician */}
-              <Card>
-                <CardContent className="p-4">
-                  <h3 className="font-semibold text-gray-900 mb-4">Diagnosis from physician</h3>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm">
-                      <thead className="bg-gray-50">
-                        <tr>
-                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">No.</th>
-                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">ICD10 code</th>
-                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">Description</th>
-                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">Type</th>
-                          <th className="text-left py-2 px-3 text-xs font-semibold text-gray-700">POA</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {diagnosisFromPhysician.map((diagnosis) => (
-                          <tr key={diagnosis.no} className="border-b border-gray-100">
-                            <td className="py-2 px-3 text-gray-900">{diagnosis.no}</td>
-                            <td className="py-2 px-3 text-gray-900">{diagnosis.icd10}</td>
-                            <td className="py-2 px-3 text-gray-900">{diagnosis.description}</td>
-                            <td className="py-2 px-3 text-gray-900">{diagnosis.type}</td>
-                            <td className="py-2 px-3 text-gray-900">{diagnosis.poa}</td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </CardContent>
-              </Card>
-
             </div>
 
             {/* Service Details */}

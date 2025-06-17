@@ -454,7 +454,7 @@ export default function ClaimsCodingQueue() {
                             </span>
                           </td>
                           <td className="py-2.5 px-3 text-xs text-gray-900">{claim.civilId}</td>
-                          <td className="py-2.5 px-3 text-xs font-medium text-gray-900">{claim.patientName}</td>
+                          <td className="py-2.5 px-1 text-xs font-medium text-gray-900">{claim.patientName}</td>
                           <td className="py-2.5 px-3 text-xs text-gray-900">{claim.invoiceNo}</td>
                           <td className="py-2.5 px-3 text-xs text-gray-900">{claim.dateOfService}</td>
                           <td className="py-2.5 px-3 text-xs font-medium text-gray-900">{claim.invoiceAmount}</td>

@@ -13,6 +13,7 @@ import {
   XCircle,
   LogOut,
   User,
+  ChevronRight,
 } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
@@ -425,16 +426,10 @@ export default function InsuranceDashboard() {
                           </td>
                           <td className="py-3 px-3">
                             <div className="flex gap-1">
-                              <Button
-                                variant="ghost"
-                                size="sm"
-                                className="h-8 px-2 text-xs text-blue-600 hover:text-blue-700 hover:bg-blue-50"
-                              >
-                                View
-                              </Button>
-                              <Button size="sm" className="h-8 px-2 text-xs bg-blue-600 text-white hover:bg-blue-700">
-                                Verify
-                              </Button>
+                              <button className="w-6 h-6 bg-blue-50 hover:bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:text-blue-800 transition-colors duration-200 flex-shrink-0 mx-auto">
+                                <ChevronRight className="w-3.5 h-3.5" />
+                              </button>
+                              
                             </div>
                           </td>
                         </tr>

@@ -459,9 +459,7 @@ export default function DenialManagement() {
                           Claim status
                         </th>
                         <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700 min-w-[80px]">View</th>
-                        <th className="text-left py-3 px-3 text-xs font-semibold text-gray-700 min-w-[80px]">
-                          Select all
-                        </th>
+                        
                       </tr>
                     </thead>
                     <tbody>
@@ -499,21 +497,12 @@ export default function DenialManagement() {
                           <td className="py-3 px-3 text-xs text-gray-900">{claim.claimStatus}</td>
                           <td className="py-3 px-3">
                             <Link href={`/resubmission/${claim.id}`}>
-                              <Button
-                                variant="ghost"
-                                size="sm"
-                                className="h-8 w-8 p-0 text-blue-600 hover:text-blue-700 hover:bg-blue-50"
-                              >
-                                <ChevronRight className="w-4 h-4" />
-                              </Button>
+                              <button className="w-6 h-6 bg-blue-50 hover:bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:text-blue-800 transition-colors duration-200 flex-shrink-0 mx-auto">
+                                <ChevronRight className="w-3.5 h-3.5" />
+                              </button>
                             </Link>
                           </td>
-                          <td className="py-3 px-3">
-                            <Checkbox
-                              checked={selectedClaims.includes(claim.id)}
-                              onCheckedChange={(checked) => handleSelectClaim(claim.id, checked as boolean)}
-                            />
-                          </td>
+                        
                         </tr>
                       ))}
                     </tbody>

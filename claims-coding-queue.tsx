@@ -383,6 +383,19 @@ export default function ClaimsCodingQueue() {
                   <table className="w-full min-w-[1000px] border-collapse">
                     <thead className="bg-gray-50 border-b border-gray-200">
                       <tr>
+                       <th className="text-center py-2.5 px-3 text-xs font-semibold text-gray-700 w-16 whitespace-nowrap">
+                          <div className="flex items-center justify-center gap-1.5">
+                            <Checkbox
+                              id="selectAll"
+                              checked={selectAll}
+                              onCheckedChange={handleSelectAll}
+                              className="h-3.5 w-3.5"
+                            />
+                            <label htmlFor="selectAll" className="text-xs">
+                              Select all
+                            </label>
+                          </div>
+                        </th>
                         <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-700 w-10 whitespace-nowrap">
                           Sl.no
                         </th>
@@ -423,19 +436,7 @@ export default function ClaimsCodingQueue() {
                         <th className="text-left py-2.5 px-3 text-xs font-semibold text-gray-700 w-16 whitespace-nowrap">
                           Assigned to
                         </th>
-                        <th className="text-center py-2.5 px-3 text-xs font-semibold text-gray-700 w-16 whitespace-nowrap">
-                          <div className="flex items-center justify-center gap-1.5">
-                            <Checkbox
-                              id="selectAll"
-                              checked={selectAll}
-                              onCheckedChange={handleSelectAll}
-                              className="h-3.5 w-3.5"
-                            />
-                            <label htmlFor="selectAll" className="text-xs">
-                              Select all
-                            </label>
-                          </div>
-                        </th>
+                       
                         <th className="text-center py-2.5 px-3 text-xs font-semibold text-gray-700 w-16 whitespace-nowrap">
                           View claim
                         </th>
@@ -447,6 +448,13 @@ export default function ClaimsCodingQueue() {
                           key={index}
                           className="border-b border-gray-100 hover:bg-gradient-to-r hover:from-blue-50 hover:to-indigo-50 transition-all duration-200"
                         >
+                          <td className="py-2.5 px-3 text-left">
+                            <Checkbox
+                              checked={selectedClaims.includes(claim.slNo)}
+                              onCheckedChange={() => handleSelectClaim(claim.slNo)}
+                              className="h-3.5 w-3.5"
+                            />
+                          </td>
                           <td className="py-2.5 px-3 text-xs font-medium text-gray-900">{claim.slNo}</td>
                           <td className="py-2.5 px-3">
                             <span className="text-xs font-mono text-gray-900 bg-gray-100 px-2 py-0.5 rounded whitespace-nowrap">
@@ -486,13 +494,7 @@ export default function ClaimsCodingQueue() {
                             </span>
                           </td>
                           <td className="py-2.5 px-3 text-xs text-gray-900">{claim.assignedTo}</td>
-                          <td className="py-2.5 px-3 text-center">
-                            <Checkbox
-                              checked={selectedClaims.includes(claim.slNo)}
-                              onCheckedChange={() => handleSelectClaim(claim.slNo)}
-                              className="h-3.5 w-3.5"
-                            />
-                          </td>
+                        
                           <td className="py-2.5 px-3 text-center">
                             <Link href={`/claims-coding/${claim.slNo}`}>
                               <button className="w-6 h-6 bg-blue-50 hover:bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:text-blue-800 transition-colors duration-200 flex-shrink-0 mx-auto">

@@ -441,14 +441,9 @@ export default function ClaimsQCSubmission() {
                                                     <td className="py-3 px-3 text-xs text-gray-900">{claim.netAmount}</td>
 
                           <td className="py-3 px-3">
-                            <Button
-                              variant="ghost"
-                              size="sm"
-                              onClick={() => handleViewClaim(claim.id)}
-                              className="h-8 w-8 p-0 text-blue-600 hover:text-blue-700 hover:bg-blue-50"
-                            >
-                              <ChevronRight className="w-4 h-4" />
-                            </Button>
+                             <button className="w-6 h-6 bg-blue-50 hover:bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:text-blue-800 transition-colors duration-200 flex-shrink-0 mx-auto">
+                                <ChevronRight className="w-3.5 h-3.5" />
+                              </button>
                           </td>
                         </tr>
                       ))}

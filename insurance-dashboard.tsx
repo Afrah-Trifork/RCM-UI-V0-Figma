@@ -31,6 +31,7 @@ import { useAuth } from "./auth-context"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import Image from "next/image"
+import EligibilityDetailScreen from "./eligibility-detail-screen"
 
 const sidebarItems = [
   { icon: FileText, label: "Eligibility", active: true, href: "/eligibility" },
@@ -426,7 +427,10 @@ export default function InsuranceDashboard() {
                           </td>
                           <td className="py-3 px-3">
                             <div className="flex gap-1">
-                              <button className="w-6 h-6 bg-blue-50 hover:bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:text-blue-800 transition-colors duration-200 flex-shrink-0 mx-auto">
+                              
+                              <button 
+                              className="w-6 h-6 bg-blue-50 hover:bg-blue-100 rounded-full flex items-center justify-center text-blue-600 hover:text-blue-800 transition-colors duration-200 flex-shrink-0 mx-auto"
+                               onClick={() => router.push(`/eligibility/${item.civilId}`)}>
                                 <ChevronRight className="w-3.5 h-3.5" />
                               </button>
                               
